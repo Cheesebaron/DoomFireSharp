@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="DoomFireSharp.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Width:" />
+            <Slider x:Name="WidthSlider" Maximum="500" Minimum="100" ValueChanged="WidthSlider_ValueChanged" HorizontalOptions="FillAndExpand" />
+            <Label x:Name="WidthValue" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Height:" />
+            <Slider x:Name="HeightSlider" Maximum="500" Minimum="100" ValueChanged="HeightSlider_ValueChanged" HorizontalOptions="FillAndExpand" />
+            <Label x:Name="HeightValue" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Pixel Scale:" />
+            <Slider x:Name="ScaleSlider" Maximum="10" Minimum="1" ValueChanged="ScaleSlider_ValueChanged" HorizontalOptions="FillAndExpand" />
+            <Label x:Name="ScaleValue" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="StartButton" Text="Start" Clicked="StartClicked" />
+            <Button x:Name="StopButton" Text="Stop" Clicked="StopClicked" />
+        </StackLayout>
+        
+        <skia:SKCanvasView x:Name="SkiaCanvasView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+
+</ContentPage>
